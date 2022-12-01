@@ -42,3 +42,51 @@ t4 = ('see','ab')*5
 元组效率高—适合国家名、元素周期表
 所以需要改变数据才使用列表，不需要改变数据就使用元组
 
+
+r2 = range(10,20,2)
+print(r2[0:2]) 表示range(10,14,2)
+
+序列是指有序的队列、序列的元素顺序按添加顺序排列、序列中的数据通过“索引”进行获取
+序列：字符串、列表、元组、数字序列
+
+
+斐波那契数列：两个数相加等于后一个
+
+# 斐波那契数列
+# 1,1,2,3,5,8,13,....
+result = []
+for i in range(0,50):
+    if i == 0 or i == 1:
+        result.append(1)
+    else:
+        result.append(result[i-2] + result[i-1])
+
+print(result)
+
+
+判断质数：
+#判断质数
+l = 776351721
+is_prime = True
+for i in range(2,l):
+    if l % i == 0:
+        print(i)
+        is_prime = False
+        break
+if is_prime == True:
+    print("{0}是质数".format(l))
+else:
+    print("{0}不是质数".format(l))
+
+
+S1 = ‘abc123’
+print(s2.split(","))
+转换为元组：print(tuple(s2.split(",")))
+
+
+
+ #join必须要求所有元素都是字符串，不是对所有列表和元组进行连接，因他们可能是非字符串
+R1 = range(1,4)
+print(",".join(r1))错误
+
+
