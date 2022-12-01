@@ -1,0 +1,215 @@
+Python笔记
+Node是Python的一个特殊常量。它是一个空值。Node与
+False不同。Node不是o。Node不是空字符串。将Node与任何
+非Node的东西进行比较将总是返回False
+
+
+input()可让脚本停下来，不退出cmd
+
+print(‘jack ate ‘, end = ‘’)
+print(‘no fat’)
+不过行jack ate no fat
+
+
+
+From math imprt *
+调用函数不再math
+
+
+for i in range(10, 0, -1):
+    print(i)
+
+
+打印10-1
+for i in range(10):
+    print(10 - i)
+
+自定义
+range(0,4)不包含4
+
+
+
+total = 0
+s = input('Enter a number (or "done"): ')
+while s != 'done':
+    num = int(s)
+    total = total + num
+    s = input('Enter a number (or "done"): ')
+print('The sum is ' + str(total))
+
+ 分支语句：需要大量的判断和选择
+
+print(1 == 1.0) #True
+
+
+print(1 == int("1")) #True
+
+a = 4 > 1 #True
+b = 5 < 2 #False
+c = 8 == 8 #True
+d = 9 < 6 #False
+
+r1 = a and b or c and not d #True and优先级比or高
+
+立方表达方式：gw**3
+
+input输入是字符串，数字用input输入后要用int转型
+
+水仙花函数知识要点：
+num = int(input("请输入一个数字"))
+gw = num%10
+sw = num%100//10
+bw = num//100
+total = gw**3 + sw**3 + bw**3
+if num==total:
+    print("{}是水仙花数".format(num))
+else:
+    print("%d不是水仙花数" % num)
+
+
+Continue 跳过本次循环
+break 结束循环
+
+#continue
+start = 101
+end = 183
+i = 100
+while i <= 182:
+    i = i + 1
+    if i % 17 != 0:
+        continue
+    print(i)
+    
+
+
+i = 0
+while i < 3:
+    mobile = input("请输入您要查询的手机号：")
+    i = i + 1
+    if mobile == "13312345678":
+        print("您的话费余额为158元")
+        break
+print("感谢您的来电")
+
+python输出年月日
+'{0:%Y}年{0:%m}月{0:%d}日'.format(now)
+‘2022年11月27日'
+ '{0:%H}时{0:%M}分{0:%S}秒'.format(now)
+'21时59分39秒'
+ 
+
+
+
+#查找1000以内的质数
+# 1. 判断某个数字是否质数
+#2.连续判断多个数字是否是质数
+j = 2
+while j <= 1000:
+    num = j
+    #只判断1个数字时，j改为7即可
+    i = 2
+    is_prime = True  #
+
+    while i < num:
+        if num % i == 0:
+            is_prime = False
+            break
+            #break只对当前循环中止，不终止上一级循环
+        i = i + 1
+    if is_prime == True:
+        print("{}是质数".format(num))
+        #只是打印质数，不用False走
+    j = j + 1
+
+成员运算符 in not in
+In  在指定的序列中找到值返回True 
+
+身份运算符 is not is
+
+
+a = 5
+c = 5.0
+print(a == c)
+#True
+print(a is c)
+#False
+
+二转十规则：从右到左用每位数乘以2的N次方（0开始）后累加
+
+
+￼
+
+
+十转二规则：用十进制对2取余，将余数放在二进制左侧
+￼
+除法等于0结束
+
+
+异或：0^0=0 0^1=1 1^0=1 1^1=0
+
+a= 60
+b= 13
+c= a&b  a和b需要转二进制计算
+
+c= a | b
+print(“a | b:”,c) 
+
+
+#00110001
+C = a ^ b
+
+取反后的数字首位如是1，
+需要取反，+1取反
+
+
+#00111100
+#00111100000=480
+c = a << 3
+
+/  浮点数
+//除法取整
+
+
+￼
+
+
+
+list1 = list[1 : 4] 
+列表取值范围是”左闭右开”
+List1 = list[1 : 4]
+print(list1)
+pirnt(list1[-1])
+
+
+#for循环用于遍历列表
+#for 迭代变量 in 可迭代对象
+i = 0
+for p in persons:
+    if p == '赵六':
+        ri = count * -1 + i
+        print(p, i, ri)
+    i += 1
+
+
+反转用法ri=count * -1 + I
+
+冒泡
+
+
+persons = ['张三', '赵六', '李四' , '王五' , '赵六' , '钱七' , '孙八']
+persons.insert(len(persons), '候大')
+print(persons)
+
+最后插入等价append的
+Persons.append(”候大”)
+
+persons[3:5] = ['王五','李四']
+print(persons)
+
+
+
+
+
+
+
+
